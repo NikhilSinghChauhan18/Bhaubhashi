@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>उत्पाद विवरण - बहुभाषी मंडी</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Product Detail Screen -->
+    <div id="product-detail-screen" class="screen active">
+        <header class="header">
+            <button class="back-btn" onclick="goBack()">←</button>
+            <h1>उत्पाद विवरण</h1>
+            <button class="share-btn">🗁</button>
+        </header>
+
+        <main class="main-content">
+            <!-- Product Image and Basic Info -->
+            <div class="product-hero">
+                <div class="product-image-large">🍅</div>
+                <div class="product-basic-info">
+                    <h2>टमाटर</h2>
+                    <p class="product-subtitle">ताजा • A ग्रेड • लाल</p>
+                    <div class="vendor-badge">
+                        <span class="vendor-name">राम किसान</span>
+                        <span class="trust-score">⭐ 4.8 (127 समीक्षा)</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- AI Price Recommendation -->
+            <div class="price-section">
+                <div class="ai-recommendation">
+                    <div class="ai-badge">
+                        <span class="ai-icon">֎</span>
+                        <span>AI मूल्य सुझाव</span>
+                    </div>
+                    
+                    <div class="price-range">
+                        <h3>उचित मूल्य सीमा</h3>
+                        <div class="price-bar">
+                            <div class="price-min">₹22</div>
+                            <div class="price-current">
+                                <span class="current-marker">₹25</span>
+                                <span class="current-label">वर्तमान मूल्य</span>
+                            </div>
+                            <div class="price-max">₹28</div>
+                        </div>
+                        <div class="price-status good">
+                            <span class="status-icon">✅</span>
+                            <span>यह मूल्य उचित है</span>
+                        </div>
+                    </div>
+
+                    <div class="market-insights">
+                        <h4>बाजार की जानकारी</h4>
+                        <div class="insight-item">
+                            <span class="insight-icon">📈</span>
+                            <span>पिछले सप्ताह से 5% वृद्धि</span>
+                        </div>
+                        <div class="insight-item">
+                            <span class="insight-icon">🌡️</span>
+                            <span>मौसम के कारण मांग बढ़ी</span>
+                        </div>
+                        <div class="insight-item">
+                            <span class="insight-icon">🚛</span>
+                            <span>परिवहन लागत सामान्य</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Details -->
+            <div class="product-details">
+                <h3>विवरण</h3>
+                <div class="detail-grid">
+                    <div class="detail-item">
+                        <span class="detail-label">गुणवत्ता</span>
+                        <span class="detail-value">A ग्रेड</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">उत्पादन स्थान</span>
+                        <span class="detail-value">पंजाब</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">फसल की तारीख</span>
+                        <span class="detail-value">2 दिन पहले</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">उपलब्ध मात्रा</span>
+                        <span class="detail-value">500 किलो</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">न्यूनतम ऑर्डर</span>
+                        <span class="detail-value">10 किलो</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">पैकेजिंग</span>
+                        <span class="detail-value">प्लास्टिक क्रेट</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Trust Indicators -->
+            <div class="trust-section">
+                <h3>विश्वसनीयता संकेतक</h3>
+                <div class="trust-indicators">
+                    <div class="trust-item">
+                        <span class="trust-icon">✅</span>
+                        <div class="trust-info">
+                            <span class="trust-title">सत्यापित विक्रेता</span>
+                            <span class="trust-desc">KYC पूर्ण</span>
+                        </div>
+                    </div>
+                    <div class="trust-item">
+                        <span class="trust-icon">🏆</span>
+                        <div class="trust-info">
+                            <span class="trust-title">गुणवत्ता प्रमाणित</span>
+                            <span class="trust-desc">FSSAI लाइसेंस</span>
+                        </div>
+                    </div>
+                    <div class="trust-item">
+                        <span class="trust-icon">💰</span>
+                        <div class="trust-info">
+                            <span class="trust-title">सुरक्षित भुगतान</span>
+                            <span class="trust-desc">UPI/बैंक ट्रांसफर</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recent Reviews -->
+            <div class="reviews-section">
+                <h3>हाल की समीक्षाएं</h3>
+                <div class="review-item">
+                    <div class="review-header">
+                        <span class="reviewer-name">सुनीता देवी</span>
+                        <span class="review-rating">⭐⭐⭐⭐⭐</span>
+                    </div>
+                    <p class="review-text">बहुत अच्छे टमाटर थे। ताजे और स्वादिष्ट।</p>
+                    <span class="review-date">2 दिन पहले</span>
+                </div>
+                <div class="review-item">
+                    <div class="review-header">
+                        <span class="reviewer-name">राजेश कुमार</span>
+                        <span class="review-rating">⭐⭐⭐⭐</span>
+                    </div>
+                    <p class="review-text">गुणवत्ता अच्छी है। समय पर डिलीवरी मिली।</p>
+                    <span class="review-date">5 दिन पहले</span>
+                </div>
+            </div>
+        </main>
+
+        <!-- Action Buttons -->
+        <div class="action-buttons">
+            <button class="btn-secondary" onclick="contactVendor()">
+                <span class="btn-icon">☏</span>
+                संपर्क करें
+            </button>
+            <button class="btn-primary" onclick="addToCart()">
+                <span class="btn-icon">🛒</span>
+                कार्ट में डालें
+            </button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>डैशबोर्ड - बहुभाषी मंडी</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Dashboard Screen -->
+    <div id="dashboard-screen" class="screen active">
+        <header class="header">
+            <button class="back-btn" onclick="goBack()">←</button>
+            <h1>मेरा डैशबोर्ड</h1>
+            <button class="notification-btn">🔔</button>
+        </header>
+
+        <main class="main-content">
+            <!-- User Summary -->
+            <div class="user-summary">
+                <div class="user-avatar">👨‍🌾</div>
+                <div class="user-info">
+                    <h2>राम किसान</h2>
+                    <p class="user-type">विक्रेता • सदस्य 2 साल से</p>
+                    <div class="user-stats">
+                        <span class="stat">⭐ 4.8 रेटिंग</span>
+                        <span class="stat">📦 245 बिक्री</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Fair Price Indicators -->
+            <div class="price-indicators">
+                <h3>आज के उचित मूल्य</h3>
+                <div class="price-cards">
+                    <div class="price-card">
+                        <div class="price-icon">🍅</div>
+                        <div class="price-info">
+                            <span class="product-name">टमाटर</span>
+                            <span class="fair-price">₹22-28/किलो</span>
+                            <span class="price-status good">उचित मूल्य</span>
+                        </div>
+                    </div>
+                    
+                    <div class="price-card">
+                        <div class="price-icon">🧅</div>
+                        <div class="price-info">
+                            <span class="product-name">प्याज</span>
+                            <span class="fair-price">₹28-35/किलो</span>
+                            <span class="price-status high">महंगा</span>
+                        </div>
+                    </div>
+                    
+                    <div class="price-card">
+                        <div class="price-icon">🥔</div>
+                        <div class="price-info">
+                            <span class="product-name">आलू</span>
+                            <span class="fair-price">₹18-22/किलो</span>
+                            <span class="price-status good">उचित मूल्य</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Trust Score Section -->
+            <div class="trust-dashboard">
+                <h3>विश्वसनीयता स्कोर</h3>
+                <div class="trust-score-card">
+                    <div class="trust-score-circle">
+                        <div class="score-number">4.8</div>
+                        <div class="score-label">⭐⭐⭐⭐⭐</div>
+                    </div>
+                    <div class="trust-breakdown">
+                        <div class="trust-metric">
+                            <span class="metric-label">गुणवत्ता</span>
+                            <div class="metric-bar">
+                                <div class="metric-fill" style="width: 96%"></div>
+                            </div>
+                            <span class="metric-score">4.8/5</span>
+                        </div>
+                        <div class="trust-metric">
+                            <span class="metric-label">समय पर डिलीवरी</span>
+                            <div class="metric-bar">
+                                <div class="metric-fill" style="width: 90%"></div>
+                            </div>
+                            <span class="metric-score">4.5/5</span>
+                        </div>
+                        <div class="trust-metric">
+                            <span class="metric-label">संवाद</span>
+                            <div class="metric-bar">
+                                <div class="metric-fill" style="width: 100%"></div>
+                            </div>
+                            <span class="metric-score">5.0/5</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recent Activity -->
+            <div class="recent-activity">
+                <h3>हाल की गतिविधि</h3>
+                <div class="activity-list">
+                    <div class="activity-item">
+                        <div class="activity-icon">💰</div>
+                        <div class="activity-info">
+                            <span class="activity-title">टमाटर बेचा</span>
+                            <span class="activity-desc">50 किलो • ₹1,250</span>
+                            <span class="activity-time">2 घंटे पहले</span>
+                        </div>
+                    </div>
+                    
+                    <div class="activity-item">
+                        <div class="activity-icon">⭐</div>
+                        <div class="activity-info">
+                            <span class="activity-title">नई समीक्षा मिली</span>
+                            <span class="activity-desc">सुनीता देवी से 5 स्टार</span>
+                            <span class="activity-time">4 घंटे पहले</span>
+                        </div>
+                    </div>
+                    
+                    <div class="activity-item">
+                        <div class="activity-icon">📦</div>
+                        <div class="activity-info">
+                            <span class="activity-title">नया ऑर्डर</span>
+                            <span class="activity-desc">प्याज 25 किलो</span>
+                            <span class="activity-time">6 घंटे पहले</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Market Trends -->
+            <div class="market-trends">
+                <h3>बाजार के रुझान</h3>
+                <div class="trend-cards">
+                    <div class="trend-card up">
+                        <div class="trend-icon">📈</div>
+                        <div class="trend-info">
+                            <span class="trend-title">सब्जियों की मांग</span>
+                            <span class="trend-change">+12% इस सप्ताह</span>
+                        </div>
+                    </div>
+                    
+                    <div class="trend-card down">
+                        <div class="trend-icon">📉</div>
+                        <div class="trend-info">
+                            <span class="trend-title">अनाज की कीमत</span>
+                            <span class="trend-change">-3% इस महीने</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Actions -->
+            <div class="quick-actions">
+                <h3>त्वरित कार्य</h3>
+                <div class="action-grid">
+                    <button class="action-btn">
+                        <span class="action-icon">➕</span>
+                        <span class="action-label">नया उत्पाद</span>
+                    </button>
+                    <button class="action-btn">
+                        <span class="action-icon">𓃑</span>
+                        <span class="action-label">बिक्री रिपोर्ट</span>
+                    </button>
+                    <button class="action-btn">
+                        <span class="action-icon">🗪</span>
+                        <span class="action-label">ग्राहक चैट</span>
+                    </button>
+                    <button class="action-btn">
+                        <span class="action-icon">⚙️</span>
+                        <span class="action-label">सेटिंग्स</span>
+                    </button>
+                </div>
+            </div>
+        </main>
+
+        <!-- Bottom Navigation -->
+        <nav class="bottom-nav">
+            <button class="nav-item" onclick="showProductListing()">
+                <span class="nav-icon">𖠿</span>
+                <span class="nav-label">मंडी</span>
+            </button>
+            <button class="nav-item active">
+                <span class="nav-icon">𓃑</span>
+                <span class="nav-label">डैशबोर्ड</span>
+            </button>
+            <button class="nav-item" onclick="openChat()">
+                <span class="nav-icon">🗪</span>
+                <span class="nav-label">चैट</span>
+            </button>
+            <button class="nav-item" onclick="showImpact()">
+                <span class="nav-icon">❀</span>
+                <span class="nav-label">प्रभाव</span>
+            </button>
+        </nav>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

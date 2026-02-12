@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>प्रभाव - बहुभाषी मंडी</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Impact Summary Screen -->
+    <div id="impact-screen" class="screen active">
+        <!-- Header -->
+        <header class="impact-header">
+            <button class="back-btn" onclick="goBack()">←</button>
+            <div class="header-content">
+                <h1>हमारा प्रभाव</h1>
+                <p class="header-subtitle">स्थानीय व्यापार में सकारात्मक बदलाव</p>
+            </div>
+            <button class="share-impact-btn" onclick="shareImpact()">🗁</button>
+        </header>
+
+        <main class="impact-content">
+            <!-- Hero Section -->
+            <div class="impact-hero">
+                <div class="hero-icon">❀</div>
+                <h2>बहुभाषी मंडी का जादू</h2>
+                <p class="hero-description">AI की मदद से भाषाओं की दीवार तोड़कर, हमने स्थानीय व्यापार को आसान और निष्पक्ष बनाया है</p>
+                
+                <!-- Key Impact Points -->
+                <div class="key-impact-points">
+                    <div class="impact-point">
+                        <span class="point-icon">🗣️</span>
+                        <span class="point-text">Multilingual Inclusion</span>
+                    </div>
+                    <div class="impact-point">
+                        <span class="point-icon">💰</span>
+                        <span class="point-text">Fair Price Discovery</span>
+                    </div>
+                    <div class="impact-point">
+                        <span class="point-icon">🤝</span>
+                        <span class="point-text">Transparent Negotiation</span>
+                    </div>
+                </div>
+                
+                <div class="overall-stats">
+                    <div class="stat-card primary">
+                        <div class="stat-number">2.5 लाख+</div>
+                        <div class="stat-label">खुश किसान और व्यापारी</div>
+                    </div>
+                    <div class="stat-card primary">
+                        <div class="stat-number">₹50 करोड़+</div>
+                        <div class="stat-label">निष्पक्ष व्यापार की राशि</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Impact Categories -->
+            <div class="impact-categories">
+                
+                <!-- Multilingual Inclusion -->
+                <div class="impact-category">
+                    <div class="category-header">
+                        <div class="category-icon">🗣️</div>
+                        <div class="category-title">
+                            <h3>भाषाओं का मेल</h3>
+                            <p class="category-subtitle">सभी के लिए आसान संवाद</p>
+                        </div>
+                    </div>
+                    
+                    <div class="impact-metrics">
+                        <div class="metric-row">
+                            <div class="metric-item">
+                                <span class="metric-icon">𑁍</span>
+                                <div class="metric-info">
+                                    <span class="metric-number">8</span>
+                                    <span class="metric-label">भारतीय भाषाएं</span>
+                                </div>
+                            </div>
+                            <div class="metric-item">
+                                <span class="metric-icon">🗪</span>
+                                <div class="metric-info">
+                                    <span class="metric-number">95%</span>
+                                    <span class="metric-label">सफल बातचीत</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="success-story">
+                            <div class="story-icon">💡</div>
+                            <div class="story-content">
+                                <p class="story-text">"अब मैं गुजराती किसानों से हिंदी में बात कर सकता हूं। व्यापार बहुत आसान हो गया!"</p>
+                                <span class="story-author">- राजेश कुमार, दिल्ली</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="visual-impact">
+                        <div class="before-after">
+                            <div class="before">
+                                <span class="ba-label">पहले</span>
+                                <div class="ba-content">
+                                    <span class="ba-icon">😕</span>
+                                    <span class="ba-text">भाषा की समस्या</span>
+                                </div>
+                            </div>
+                            <div class="arrow">→</div>
+                            <div class="after">
+                                <span class="ba-label">अब</span>
+                                <div class="ba-content">
+                                    <span class="ba-icon">😊</span>
+                                    <span class="ba-text">आसान बातचीत</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Fair Price Discovery -->
+                <div class="impact-category">
+                    <div class="category-header">
+                        <div class="category-icon">💰</div>
+                        <div class="category-title">
+                            <h3>उचित मूल्य खोज</h3>
+                            <p class="category-subtitle">AI से सही कीमत की जानकारी</p>
+                        </div>
+                    </div>
+                    
+                    <div class="impact-metrics">
+                        <div class="metric-row">
+                            <div class="metric-item">
+                                <span class="metric-icon">𓃑</span>
+                                <div class="metric-info">
+                                    <span class="metric-number">15%</span>
+                                    <span class="metric-label">बेहतर कीमत</span>
+                                </div>
+                            </div>
+                            <div class="metric-item">
+                                <span class="metric-icon">⚖️</span>
+                                <div class="metric-info">
+                                    <span class="metric-number">90%</span>
+                                    <span class="metric-label">निष्पक्ष सौदे</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="price-comparison">
+                            <div class="price-item old-price">
+                                <span class="price-label">पुराना तरीका</span>
+                                <span class="price-value">₹20-35/किलो</span>
+                                <span class="price-desc">अनुमान से कीमत</span>
+                            </div>
+                            <div class="vs-arrow">VS</div>
+                            <div class="price-item new-price">
+                                <span class="price-label">AI के साथ</span>
+                                <span class="price-value">₹25-28/किलो</span>
+                                <span class="price-desc">सटीक बाजार भाव</span>
+                            </div>
+                        </div>
+                        
+                        <div class="success-story">
+                            <div class="story-icon">💡</div>
+                            <div class="story-content">
+                                <p class="story-text">"AI की मदद से मुझे पता चला कि मैं टमाटर ₹5 कम में बेच रहा था। अब सही कीमत मिलती है!"</p>
+                                <span class="story-author">- सुनीता देवी, पंजाब</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Faster Negotiation -->
+                <div class="impact-category">
+                    <div class="category-header">
+                        <div class="category-icon">⚡</div>
+                        <div class="category-title">
+                            <h3>तेज़ बातचीत</h3>
+                            <p class="category-subtitle">कम समय में बेहतर सौदे</p>
+                        </div>
+                    </div>
+                    
+                    <div class="impact-metrics">
+                        <div class="metric-row">
+                            <div class="metric-item">
+                                <span class="metric-icon">⏱️</span>
+                                <div class="metric-info">
+                                    <span class="metric-number">5 मिनट</span>
+                                    <span class="metric-label">औसत सौदा समय</span>
+                                </div>
+                            </div>
+                            <div class="metric-item">
+                                <span class="metric-icon">🎯</span>
+                                <div class="metric-info">
+                                    <span class="metric-number">80%</span>
+                                    <span class="metric-label">पहली कोशिश में सफलता</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="time-comparison">
+                            <div class="time-item">
+                                <div class="time-icon old">🐌</div>
+                                <div class="time-content">
+                                    <span class="time-label">पहले</span>
+                                    <span class="time-value">30-45 मिनट</span>
+                                    <span class="time-desc">लंबी बातचीत</span>
+                                </div>
+                            </div>
+                            <div class="improvement-arrow">📈</div>
+                            <div class="time-item">
+                                <div class="time-icon new">⚡</div>
+                                <div class="time-content">
+                                    <span class="time-label">अब</span>
+                                    <span class="time-value">5-10 मिनट</span>
+                                    <span class="time-desc">त्वरित सौदा</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="efficiency-stats">
+                            <div class="efficiency-item">
+                                <span class="eff-icon">📱</span>
+                                <span class="eff-text">स्मार्ट सुझाव</span>
+                            </div>
+                            <div class="efficiency-item">
+                                <span class="eff-icon">🤖</span>
+                                <span class="eff-text">AI सहायता</span>
+                            </div>
+                            <div class="efficiency-item">
+                                <span class="eff-icon">🗪</span>
+                                <span class="eff-text">त्वरित जवाब</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Trust and Transparency -->
+                <div class="impact-category">
+                    <div class="category-header">
+                        <div class="category-icon">🤝</div>
+                        <div class="category-title">
+                            <h3>विश्वास और पारदर्शिता</h3>
+                            <p class="category-subtitle">सुरक्षित और भरोसेमंद व्यापार</p>
+                        </div>
+                    </div>
+                    
+                    <div class="impact-metrics">
+                        <div class="metric-row">
+                            <div class="metric-item">
+                                <span class="metric-icon">⭐</span>
+                                <div class="metric-info">
+                                    <span class="metric-number">4.8/5</span>
+                                    <span class="metric-label">औसत रेटिंग</span>
+                                </div>
+                            </div>
+                            <div class="metric-item">
+                                <span class="metric-icon">🛡️</span>
+                                <div class="metric-info">
+                                    <span class="metric-number">99.5%</span>
+                                    <span class="metric-label">सुरक्षित लेनदेन</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="trust-features">
+                            <div class="trust-item">
+                                <span class="trust-icon">✅</span>
+                                <div class="trust-content">
+                                    <span class="trust-title">सत्यापित विक्रेता</span>
+                                    <span class="trust-desc">KYC और लाइसेंस जांच</span>
+                                </div>
+                            </div>
+                            <div class="trust-item">
+                                <span class="trust-icon">𓃑</span>
+                                <div class="trust-content">
+                                    <span class="trust-title">पारदर्शी कीमत</span>
+                                    <span class="trust-desc">बाजार डेटा आधारित</span>
+                                </div>
+                            </div>
+                            <div class="trust-item">
+                                <span class="trust-icon">💳</span>
+                                <div class="trust-content">
+                                    <span class="trust-title">सुरक्षित भुगतान</span>
+                                    <span class="trust-desc">UPI और बैंक ट्रांसफर</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="success-story">
+                            <div class="story-icon">💡</div>
+                            <div class="story-content">
+                                <p class="story-text">"अब मुझे डर नहीं लगता नए विक्रेताओं से सौदा करने में। सब कुछ पारदर्शी है!"</p>
+                                <span class="story-author">- अमित शर्मा, मुंबई</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Community Impact -->
+            <div class="community-impact">
+                <div class="community-header">
+                    <h3>समुदायिक प्रभाव</h3>
+                    <p>हमारे साथ जुड़े लोगों की सफलता की कहानियां</p>
+                </div>
+                
+                <div class="community-stats">
+                    <div class="community-stat">
+                        <div class="stat-visual">
+                            <span class="stat-emoji">👨‍🌾</span>
+                            <span class="stat-count">1.2 लाख</span>
+                        </div>
+                        <span class="stat-description">सक्रिय किसान</span>
+                    </div>
+                    <div class="community-stat">
+                        <div class="stat-visual">
+                            <span class="stat-emoji">𖠿</span>
+                            <span class="stat-count">85,000</span>
+                        </div>
+                        <span class="stat-description">व्यापारी</span>
+                    </div>
+                    <div class="community-stat">
+                        <div class="stat-visual">
+                            <span class="stat-emoji">🌾</span>
+                            <span class="stat-count">500+</span>
+                        </div>
+                        <span class="stat-description">उत्पाद श्रेणियां</span>
+                    </div>
+                    <div class="community-stat">
+                        <div class="stat-visual">
+                            <span class="stat-emoji">🏘️</span>
+                            <span class="stat-count">2,500</span>
+                        </div>
+                        <span class="stat-description">गांव और शहर</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Regional Impact Map -->
+            <div class="regional-impact">
+                <div class="region-header">
+                    <h3>क्षेत्रीय प्रभाव</h3>
+                    <p>भारत भर में हमारी पहुंच</p>
+                </div>
+                
+                <div class="regions-grid">
+                    <div class="region-card">
+                        <div class="region-icon">🌾</div>
+                        <div class="region-info">
+                            <h4>पंजाब</h4>
+                            <p class="region-stat">45,000 किसान</p>
+                            <p class="region-benefit">गेहूं और चावल में 18% बेहतर कीमत</p>
+                        </div>
+                    </div>
+                    
+                    <div class="region-card">
+                        <div class="region-icon">🥭</div>
+                        <div class="region-info">
+                            <h4>महाराष्ट्र</h4>
+                            <p class="region-stat">38,000 किसान</p>
+                            <p class="region-benefit">फलों में 22% अधिक मुनाफा</p>
+                        </div>
+                    </div>
+                    
+                    <div class="region-card">
+                        <div class="region-icon">🌶️</div>
+                        <div class="region-info">
+                            <h4>गुजरात</h4>
+                            <p class="region-stat">32,000 किसान</p>
+                            <p class="region-benefit">सब्जियों में 15% बेहतर रेट</p>
+                        </div>
+                    </div>
+                    
+                    <div class="region-card">
+                        <div class="region-icon">🥥</div>
+                        <div class="region-info">
+                            <h4>तमिलनाडु</h4>
+                            <p class="region-stat">28,000 किसान</p>
+                            <p class="region-benefit">नारियल में 25% अधिक आय</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Future Goals -->
+            <div class="future-goals">
+                <div class="goals-header">
+                    <div class="goals-icon">🎯</div>
+                    <h3>आने वाले लक्ष्य</h3>
+                    <p>2025 तक हमारे सपने</p>
+                </div>
+                
+                <div class="goals-grid">
+                    <div class="goal-item">
+                        <div class="goal-progress">
+                            <div class="progress-circle">
+                                <span class="progress-text">60%</span>
+                            </div>
+                        </div>
+                        <div class="goal-content">
+                            <h4>10 लाख किसान</h4>
+                            <p>वर्तमान: 2.5 लाख</p>
+                        </div>
+                    </div>
+                    
+                    <div class="goal-item">
+                        <div class="goal-progress">
+                            <div class="progress-circle">
+                                <span class="progress-text">40%</span>
+                            </div>
+                        </div>
+                        <div class="goal-content">
+                            <h4>15 भाषाएं</h4>
+                            <p>वर्तमान: 8 भाषाएं</p>
+                        </div>
+                    </div>
+                    
+                    <div class="goal-item">
+                        <div class="goal-progress">
+                            <div class="progress-circle">
+                                <span class="progress-text">75%</span>
+                            </div>
+                        </div>
+                        <div class="goal-content">
+                            <h4>₹500 करोड़ व्यापार</h4>
+                            <p>वर्तमान: ₹50 करोड़</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Call to Action -->
+            <div class="impact-cta">
+                <div class="cta-content">
+                    <h3>आप भी बनें इस बदलाव का हिस्सा!</h3>
+                    <p>हमारे साथ जुड़कर स्थानीय व्यापार को और भी बेहतर बनाएं</p>
+                    
+                    <div class="cta-buttons">
+                        <button class="btn-primary" onclick="joinCommunity()">
+                            <span class="btn-icon">🤝</span>
+                            समुदाय में शामिल हों
+                        </button>
+                        <button class="btn-secondary" onclick="shareSuccess()">
+                            <span class="btn-icon">📢</span>
+                            अपनी सफलता साझा करें
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Bottom Navigation -->
+        <nav class="bottom-nav">
+            <button class="nav-item" onclick="showProductListing()">
+                <span class="nav-icon">𖠿</span>
+                <span class="nav-label">मंडी</span>
+            </button>
+            <button class="nav-item" onclick="showDashboard()">
+                <span class="nav-icon">𓃑</span>
+                <span class="nav-label">डैशबोर्ड</span>
+            </button>
+            <button class="nav-item" onclick="openChat()">
+                <span class="nav-icon">🗪</span>
+                <span class="nav-label">चैट</span>
+            </button>
+            <button class="nav-item active">
+                <span class="nav-icon">❀</span>
+                <span class="nav-label">प्रभाव</span>
+            </button>
+        </nav>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="impact.js"></script>
+</body>
+</html>

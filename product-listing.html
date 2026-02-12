@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>उत्पाद सूची - बहुभाषी मंडी</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Product Listing Screen -->
+    <div id="product-listing-screen" class="screen active">
+        <header class="header">
+            <button class="back-btn" onclick="goBack()">←</button>
+            <h1>मंडी के सामान</h1>
+            <button class="filter-btn" onclick="toggleFilters()">🔍︎︎</button>
+        </header>
+
+        <!-- Search and Filters -->
+        <div class="search-section">
+            <div class="search-bar">
+                <input type="text" placeholder="सब्जी, फल या अनाज खोजें..." id="searchInput">
+                <button class="search-btn">🔍︎</button>
+            </div>
+            
+            <div class="filter-chips" id="filterChips">
+                <button class="chip active" data-category="all">सभी</button>
+                <button class="chip" data-category="vegetables">सब्जियां</button>
+                <button class="chip" data-category="fruits">फल</button>
+                <button class="chip" data-category="grains">अनाज</button>
+                <button class="chip" data-category="spices">मसाले</button>
+            </div>
+        </div>
+
+        <main class="main-content">
+            <div class="products-grid" id="productsGrid">
+                <!-- Vegetables -->
+                <div class="product-card" data-category="vegetables" onclick="showProductDetail('tomato')">
+                    <div class="product-image">🍅</div>
+                    <div class="product-info">
+                        <h3>टमाटर</h3>
+                        <p class="product-quality">ताजा • A ग्रेड</p>
+                        <div class="price-info">
+                            <span class="current-price">₹25/किलो</span>
+                            <span class="price-trend up">↗ +5%</span>
+                        </div>
+                        <div class="vendor-info">
+                            <span class="vendor-name">राम किसान</span>
+                            <span class="trust-score">⭐ 4.8</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="vegetables" onclick="showProductDetail('onion')">
+                    <div class="product-image">🧅</div>
+                    <div class="product-info">
+                        <h3>प्याज</h3>
+                        <p class="product-quality">ताजा • A ग्रेड</p>
+                        <div class="price-info">
+                            <span class="current-price">₹30/किलो</span>
+                            <span class="price-trend down">↘ -3%</span>
+                        </div>
+                        <div class="vendor-info">
+                            <span class="vendor-name">श्याम व्यापारी</span>
+                            <span class="trust-score">⭐ 4.6</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="vegetables" onclick="showProductDetail('potato')">
+                    <div class="product-image">🥔</div>
+                    <div class="product-info">
+                        <h3>आलू</h3>
+                        <p class="product-quality">ताजा • B ग्रेड</p>
+                        <div class="price-info">
+                            <span class="current-price">₹20/किलो</span>
+                            <span class="price-trend stable">→ 0%</span>
+                        </div>
+                        <div class="vendor-info">
+                            <span class="vendor-name">गीता देवी</span>
+                            <span class="trust-score">⭐ 4.9</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Fruits -->
+                <div class="product-card" data-category="fruits" onclick="showProductDetail('apple')">
+                    <div class="product-image">🍎</div>
+                    <div class="product-info">
+                        <h3>सेब</h3>
+                        <p class="product-quality">ताजा • A ग्रेड</p>
+                        <div class="price-info">
+                            <span class="current-price">₹120/किलो</span>
+                            <span class="price-trend up">↗ +8%</span>
+                        </div>
+                        <div class="vendor-info">
+                            <span class="vendor-name">हरी फल भंडार</span>
+                            <span class="trust-score">⭐ 4.7</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="fruits" onclick="showProductDetail('banana')">
+                    <div class="product-image">🍌</div>
+                    <div class="product-info">
+                        <h3>केला</h3>
+                        <p class="product-quality">पका हुआ • A ग्रेड</p>
+                        <div class="price-info">
+                            <span class="current-price">₹40/दर्जन</span>
+                            <span class="price-trend stable">→ 0%</span>
+                        </div>
+                        <div class="vendor-info">
+                            <span class="vendor-name">मोहन फल वाला</span>
+                            <span class="trust-score">⭐ 4.5</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Grains -->
+                <div class="product-card" data-category="grains" onclick="showProductDetail('wheat')">
+                    <div class="product-image">🌾</div>
+                    <div class="product-info">
+                        <h3>गेहूं</h3>
+                        <p class="product-quality">सूखा • A ग्रेड</p>
+                        <div class="price-info">
+                            <span class="current-price">₹2200/क्विंटल</span>
+                            <span class="price-trend up">↗ +2%</span>
+                        </div>
+                        <div class="vendor-info">
+                            <span class="vendor-name">किसान सहकारी</span>
+                            <span class="trust-score">⭐ 4.8</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Bottom Navigation -->
+        <nav class="bottom-nav">
+            <button class="nav-item active">
+                <span class="nav-icon">𖠿</span>
+                <span class="nav-label">मंडी</span>
+            </button>
+            <button class="nav-item" onclick="showDashboard()">
+                <span class="nav-icon">𓃑</span>
+                <span class="nav-label">डैशबोर्ड</span>
+            </button>
+            <button class="nav-item" onclick="openChat()">
+                <span class="nav-icon">🗪</span>
+                <span class="nav-label">चैट</span>
+            </button>
+            <button class="nav-item" onclick="showImpact()">
+                <span class="nav-icon">❀</span>
+                <span class="nav-label">प्रभाव</span>
+            </button>
+        </nav>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

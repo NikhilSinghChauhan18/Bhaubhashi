@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>चैट - बहुभाषी मंडी</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Chat Screen -->
+    <div id="chat-screen" class="screen active">
+        <!-- Chat Header -->
+        <header class="chat-header">
+            <button class="back-btn" onclick="goBack()">←</button>
+            <div class="chat-user-info">
+                <div class="user-avatar">👨‍🌾</div>
+                <div class="user-details">
+                    <h3>राम किसान</h3>
+                    <div class="user-status">
+                        <span class="status-dot online"></span>
+                        <span class="status-text">ऑनलाइन</span>
+                        <span class="trust-badge">⭐ 4.8</span>
+                    </div>
+                </div>
+            </div>
+            <div class="chat-actions">
+                <button class="language-toggle" onclick="toggleTranslation()">
+                    <span class="lang-from">हिं</span>
+                    <span class="translate-icon">⇄</span>
+                    <span class="lang-to">ગુજ</span>
+                </button>
+                <button class="call-btn" onclick="makeCall()">☏</button>
+            </div>
+        </header>
+
+        <!-- Product Context Bar -->
+        <div class="product-context">
+            <div class="context-product">
+                <span class="product-emoji">🍅</span>
+                <div class="context-info">
+                    <span class="context-name">टमाटर - A ग्रेड</span>
+                    <span class="context-price">₹25/किलो</span>
+                </div>
+            </div>
+            <div class="ai-price-hint">
+                <span class="ai-icon">֎</span>
+                <span class="hint-text">मंडी औसत: ₹22-28</span>
+            </div>
+        </div>
+
+        <!-- AI Assistant Label -->
+        <div class="ai-assistant-label">
+            <span class="ai-label-icon">🤖</span>
+            <span class="ai-label-text">AI-assisted multilingual negotiation</span>
+        </div>
+
+        <!-- Chat Messages -->
+        <main class="chat-messages" id="chatMessages">
+            <!-- Welcome Message -->
+            <div class="message-group system">
+                <div class="system-message">
+                    <span class="system-icon">֎</span>
+                    <div class="system-text">
+                        <p>AI अनुवाद चालू है। आपकी बातचीत सुरक्षित और निष्पक्ष रहेगी।</p>
+                        <p class="system-subtext">Translation active: Hindi ⇄ Gujarati</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Vendor Message 1 -->
+            <div class="message-group vendor">
+                <div class="message-bubble vendor-msg">
+                    <div class="message-header">
+                        <span class="sender-name">राम किसान</span>
+                        <span class="message-time">अभी</span>
+                        <span class="original-lang">हिं</span>
+                    </div>
+                    <div class="message-content">
+                        <p class="original-text">नमस्ते! आपको टमाटर चाहिए? बहुत अच्छी क्वालिटी है।</p>
+                        <div class="translated-text">
+                            <span class="translate-label">ગુજરાતી:</span>
+                            <p>નમસ્તે! તમને ટમેટાં જોઈએ છે? ખૂબ સારી ક્વોલિટી છે.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- AI Assistance for Buyer -->
+            <div class="message-group ai-assist">
+                <div class="ai-assistance buyer-assist">
+                    <div class="assist-header">
+                        <span class="ai-icon">֎</span>
+                        <span class="assist-title">AI सहायता</span>
+                    </div>
+                    <div class="assist-content">
+                        <div class="assist-item">
+                            <span class="assist-icon">💡</span>
+                            <span class="assist-text">विक्रेता की रेटिंग अच्छी है (4.8⭐)</span>
+                        </div>
+                        <div class="assist-item">
+                            <span class="assist-icon">𓃑</span>
+                            <span class="assist-text">A ग्रेड टमाटर का बाजार भाव ₹22-28/किलो</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Buyer Message 1 -->
+            <div class="message-group buyer">
+                <div class="message-bubble buyer-msg">
+                    <div class="message-header">
+                        <span class="sender-name">आप</span>
+                        <span class="message-time">अभी</span>
+                        <span class="original-lang">ગુજ</span>
+                    </div>
+                    <div class="message-content">
+                        <p class="original-text">હા, મને 50 કિલો ટમેટાં જોઈએ છે. કિંમત કેટલી છે?</p>
+                        <div class="translated-text">
+                            <span class="translate-label">हिंदी:</span>
+                            <p>हां, मुझे 50 किलो टमाटर चाहिए। कीमत क्या है?</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Vendor Message 2 -->
+            <div class="message-group vendor">
+                <div class="message-bubble vendor-msg">
+                    <div class="message-header">
+                        <span class="sender-name">राम किसान</span>
+                        <span class="message-time">अभी</span>
+                        <span class="original-lang">हिं</span>
+                    </div>
+                    <div class="message-content">
+                        <p class="original-text">50 किलो के लिए ₹30 प्रति किलो। कुल ₹1500। आज ही तोड़े हैं।</p>
+                        <div class="translated-text">
+                            <span class="translate-label">ગુજરાતી:</span>
+                            <p>50 કિલો માટે ₹30 પ્રતિ કિલો. કુલ ₹1500. આજે જ તોડ્યા છે.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- AI Price Analysis -->
+            <div class="message-group ai-assist">
+                <div class="ai-assistance price-analysis">
+                    <div class="assist-header">
+                        <span class="ai-icon">֎</span>
+                        <span class="assist-title">मूल्य विश्लेषण</span>
+                    </div>
+                    <div class="price-analysis-content">
+                        <div class="price-status high">
+                            <span class="status-icon">⚠️</span>
+                            <span class="status-text">यह कीमत आज के मंडी औसत से ₹2-5 अधिक है</span>
+                        </div>
+                        <div class="negotiation-tips">
+                            <div class="tip-item">
+                                <span class="tip-icon">💰</span>
+                                <span class="tip-text">आप सुरक्षित रूप से ₹25-27/किलो तक बातचीत कर सकते हैं</span>
+                            </div>
+                            <div class="tip-item">
+                                <span class="tip-icon">📈</span>
+                                <span class="tip-text">50 किलो के लिए उचित कीमत: ₹1250-1350</span>
+                            </div>
+                        </div>
+                        <div class="suggested-responses">
+                            <p class="suggest-label">सुझावित जवाब:</p>
+                            <button class="quick-reply" onclick="sendQuickReply('negotiate')">
+                                "₹25/किलो में दे सकते हैं?"
+                            </button>
+                            <button class="quick-reply" onclick="sendQuickReply('bulk-discount')">
+                                "50 किलो में कुछ छूट मिलेगी?"
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Buyer Message 2 (Negotiation) -->
+            <div class="message-group buyer">
+                <div class="message-bubble buyer-msg">
+                    <div class="message-header">
+                        <span class="sender-name">आप</span>
+                        <span class="message-time">अभी</span>
+                        <span class="original-lang">ગુજ</span>
+                    </div>
+                    <div class="message-content">
+                        <p class="original-text">₹30 થોડું વધારે લાગે છે. 50 કિલોમાં કંઈ છૂટ મળશે?</p>
+                        <div class="translated-text">
+                            <span class="translate-label">हिंदी:</span>
+                            <p>₹30 थोड़ा ज्यादा लग रहा है। 50 किलो में कुछ छूट मिलेगी?</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- AI Assistance for Vendor -->
+            <div class="message-group ai-assist">
+                <div class="ai-assistance vendor-assist">
+                    <div class="assist-header">
+                        <span class="ai-icon">֎</span>
+                        <span class="assist-title">विक्रेता सहायता</span>
+                    </div>
+                    <div class="assist-content">
+                        <div class="assist-item">
+                            <span class="assist-icon">𓃑</span>
+                            <span class="assist-text">खरीदार सही कह रहा है - आज का औसत ₹25-28 है</span>
+                        </div>
+                        <div class="assist-item">
+                            <span class="assist-icon">💡</span>
+                            <span class="assist-text">₹26-27/किलो उचित कीमत होगी</span>
+                        </div>
+                        <div class="assist-item">
+                            <span class="assist-icon">🤝</span>
+                            <span class="assist-text">50 किलो अच्छा ऑर्डर है - छूट दे सकते हैं</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Vendor Message 3 (Counter Offer) -->
+            <div class="message-group vendor">
+                <div class="message-bubble vendor-msg">
+                    <div class="message-header">
+                        <span class="sender-name">राम किसान</span>
+                        <span class="message-time">अभी</span>
+                        <span class="original-lang">हिं</span>
+                    </div>
+                    <div class="message-content">
+                        <p class="original-text">ठीक है भाई। 50 किलो के लिए ₹27 प्रति किलो। कुल ₹1350। कैसा रहेगा?</p>
+                        <div class="translated-text">
+                            <span class="translate-label">ગુજરાતી:</span>
+                            <p>ઠીક છે ભાઈ. 50 કિલો માટે ₹27 પ્રતિ કિલો. કુલ ₹1350. કેવું રહેશે?</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- AI Fair Deal Confirmation -->
+            <div class="message-group ai-assist">
+                <div class="ai-assistance deal-confirmation">
+                    <div class="assist-header">
+                        <span class="ai-icon">✅</span>
+                        <span class="assist-title">उचित सौदा</span>
+                    </div>
+                    <div class="deal-analysis">
+                        <div class="deal-status good">
+                            <span class="status-icon">✅</span>
+                            <span class="status-text">यह कीमत आज के मंडी औसत के अनुकूल है</span>
+                        </div>
+                        <div class="deal-benefits">
+                            <div class="benefit-item">
+                                <span class="benefit-icon">💰</span>
+                                <span class="benefit-text">आपकी बचत: ₹150 (मूल कीमत से)</span>
+                            </div>
+                            <div class="benefit-item">
+                                <span class="benefit-icon">𓃑</span>
+                                <span class="benefit-text">बाजार औसत के अनुकूल: ₹25-28/किलो</span>
+                            </div>
+                        </div>
+                        <div class="deal-actions">
+                            <button class="accept-deal" onclick="acceptDeal()">
+                                <span class="btn-icon">🤝</span>
+                                सौदा स्वीकार करें
+                            </button>
+                            <button class="continue-chat" onclick="continueNegotiation()">
+                                बातचीत जारी रखें
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Buyer Acceptance -->
+            <div class="message-group buyer">
+                <div class="message-bubble buyer-msg">
+                    <div class="message-header">
+                        <span class="sender-name">आप</span>
+                        <span class="message-time">अभी</span>
+                        <span class="original-lang">ગુજ</span>
+                    </div>
+                    <div class="message-content">
+                        <p class="original-text">હા, ₹1350 ઠીક છે. કાલે સવારે લઈ લઈશ.</p>
+                        <div class="translated-text">
+                            <span class="translate-label">हिंदी:</span>
+                            <p>हां, ₹1350 ठीक है। कल सुबह ले लूंगा।</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Deal Confirmation -->
+            <div class="message-group system">
+                <div class="deal-confirmed">
+                    <div class="confirmation-header">
+                        <span class="confirm-icon">🎉</span>
+                        <h3>सौदा पक्का!</h3>
+                    </div>
+                    <div class="deal-summary">
+                        <div class="summary-item">
+                            <span class="summary-label">उत्पाद:</span>
+                            <span class="summary-value">टमाटर - A ग्रेड</span>
+                        </div>
+                        <div class="summary-item">
+                            <span class="summary-label">मात्रा:</span>
+                            <span class="summary-value">50 किलो</span>
+                        </div>
+                        <div class="summary-item">
+                            <span class="summary-label">कीमत:</span>
+                            <span class="summary-value">₹27/किलो</span>
+                        </div>
+                        <div class="summary-item total">
+                            <span class="summary-label">कुल राशि:</span>
+                            <span class="summary-value">₹1,350</span>
+                        </div>
+                    </div>
+                    <div class="next-steps">
+                        <button class="btn-primary" onclick="proceedToPayment()">
+                            <span class="btn-icon">💳</span>
+                            भुगतान करें
+                        </button>
+                        <button class="btn-secondary" onclick="saveForLater()">
+                            <span class="btn-icon">📋</span>
+                            बाद में
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Chat Input -->
+        <div class="chat-input-container">
+            <div class="input-tools">
+                <button class="tool-btn" onclick="toggleVoiceInput()">🎤</button>
+                <button class="tool-btn" onclick="openCamera()">📷</button>
+                <button class="tool-btn" onclick="showQuickReplies()">⚡</button>
+            </div>
+            <div class="input-area">
+                <input type="text" id="messageInput" placeholder="संदेश लिखें..." class="message-input">
+                <button class="send-btn" onclick="sendMessage()">
+                    <span class="send-icon">➤</span>
+                </button>
+            </div>
+            <div class="input-language">
+                <span class="input-lang-indicator">ગુજરાતી માં લખી રહ્યા છો</span>
+            </div>
+        </div>
+
+        <!-- Quick Replies Panel -->
+        <div class="quick-replies-panel" id="quickRepliesPanel">
+            <div class="quick-replies-header">
+                <span>त्वरित जवाब</span>
+                <button class="close-quick" onclick="hideQuickReplies()">×</button>
+            </div>
+            <div class="quick-replies-grid">
+                <button class="quick-reply-btn" onclick="sendQuickReply('yes')">हां / હા</button>
+                <button class="quick-reply-btn" onclick="sendQuickReply('no')">नहीं / ના</button>
+                <button class="quick-reply-btn" onclick="sendQuickReply('price')">कीमत? / કિંમત?</button>
+                <button class="quick-reply-btn" onclick="sendQuickReply('quality')">क्वालिटी? / ક્વોલિટી?</button>
+                <button class="quick-reply-btn" onclick="sendQuickReply('delivery')">डिलीवरी? / ડિલિવરી?</button>
+                <button class="quick-reply-btn" onclick="sendQuickReply('thanks')">धन्यवाद / આભાર</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="chat.js"></script>
+</body>
+</html>

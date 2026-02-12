@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo - बहुभाषी मंडी</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Interactive Demo Screen -->
+    <div id="demo-screen" class="screen active">
+        <!-- Demo Header -->
+        <header class="demo-header">
+            <div class="demo-logo">
+                <span class="logo-icon">🏪</span>
+                <div class="logo-text">
+                    <h1>बहुभाषी मंडी</h1>
+                    <p class="demo-tagline">Bridging Languages in Local Trade with AI</p>
+                </div>
+            </div>
+            <div class="demo-status">
+                <span class="status-indicator live">🔴 LIVE DEMO</span>
+            </div>
+        </header>
+
+        <!-- Interactive Demo Content -->
+        <main class="demo-content">
+            <!-- Demo Introduction -->
+            <div class="demo-intro">
+                <div class="intro-content">
+                    <h2>🚀 Experience the Future of Local Trade</h2>
+                    <p class="intro-description">
+                        Watch how AI breaks language barriers and creates fair pricing in Indian local markets. 
+                        Tap any section below to explore the interactive experience.
+                    </p>
+                </div>
+                
+                <!-- Key Features Highlight -->
+                <div class="features-showcase">
+                    <div class="feature-highlight" onclick="showFeatureDemo('multilingual')">
+                        <div class="feature-icon">🗣️</div>
+                        <div class="feature-info">
+                            <h3>8 Languages</h3>
+                            <p>Real-time translation</p>
+                        </div>
+                        <div class="feature-arrow">→</div>
+                    </div>
+                    
+                    <div class="feature-highlight" onclick="showFeatureDemo('ai-pricing')">
+                        <div class="feature-icon">🤖</div>
+                        <div class="feature-info">
+                            <h3>AI Pricing</h3>
+                            <p>Fair market rates</p>
+                        </div>
+                        <div class="feature-arrow">→</div>
+                    </div>
+                    
+                    <div class="feature-highlight" onclick="showFeatureDemo('trust')">
+                        <div class="feature-icon">🤝</div>
+                        <div class="feature-info">
+                            <h3>Trust System</h3>
+                            <p>Verified vendors</p>
+                        </div>
+                        <div class="feature-arrow">→</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Interactive Phone Mockup -->
+            <div class="phone-mockup">
+                <div class="phone-frame">
+                    <div class="phone-screen" id="phoneScreen">
+                        <!-- Dynamic Screen Content -->
+                        <div class="screen-content home-demo active" id="homeDemo">
+                            <div class="demo-screen-header">
+                                <div class="status-bar">
+                                    <span class="time">12:34</span>
+                                    <span class="battery">🔋 85%</span>
+                                </div>
+                                <div class="app-header">
+                                    <h3>बहुभाषी मंडी</h3>
+                                    <span class="location">📍 दिल्ली मंडी</span>
+                                </div>
+                            </div>
+                            
+                            <div class="demo-user-selection">
+                                <h4>आप कौन हैं?</h4>
+                                <div class="demo-user-cards">
+                                    <button class="demo-user-card" onclick="selectDemoUser('vendor')">
+                                        <span class="card-icon">👨‍🌾</span>
+                                        <span class="card-text">विक्रेता</span>
+                                    </button>
+                                    <button class="demo-user-card" onclick="selectDemoUser('buyer')">
+                                        <span class="card-icon">🛒</span>
+                                        <span class="card-text">खरीदार</span>
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            <div class="demo-cta">
+                                <button class="demo-start-btn" onclick="startDemo()">
+                                    <span class="btn-icon">🚀</span>
+                                    व्यापार शुरू करें
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Product Listing Demo -->
+                        <div class="screen-content listing-demo" id="listingDemo">
+                            <div class="demo-screen-header">
+                                <div class="demo-nav-header">
+                                    <button class="demo-back-btn" onclick="goToDemoScreen('home')">←</button>
+                                    <h3>मंडी के सामान</h3>
+                                    <button class="demo-search-btn">🔍</button>
+                                </div>
+                            </div>
+                            
+                            <div class="demo-search-bar">
+                                <input type="text" placeholder="सब्जी, फल खोजें..." class="demo-search-input">
+                                <div class="demo-filter-chips">
+                                    <span class="demo-chip active">सभी</span>
+                                    <span class="demo-chip">सब्जियां</span>
+                                    <span class="demo-chip">फल</span>
+                                </div>
+                            </div>
+                            
+                            <div class="demo-products">
+                                <div class="demo-product-card" onclick="goToDemoScreen('detail')">
+                                    <div class="product-image">🍅</div>
+                                    <div class="product-info">
+                                        <h4>टमाटर</h4>
+                                        <p class="product-quality">ताजा • A ग्रेड</p>
+                                        <div class="product-price">
+                                            <span class="price">₹25/किलो</span>
+                                            <span class="trend up">↗ +5%</span>
+                                        </div>
+                                        <div class="vendor-info">
+                                            <span class="vendor">राम किसान</span>
+                                            <span class="rating">⭐ 4.8</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="demo-product-card">
+                                    <div class="product-image">🧅</div>
+                                    <div class="product-info">
+                                        <h4>प्याज</h4>
+                                        <p class="product-quality">ताजा • A ग्रेड</p>
+                                        <div class="product-price">
+                                            <span class="price">₹30/किलो</span>
+                                            <span class="trend down">↘ -3%</span>
+                                        </div>
+                                        <div class="vendor-info">
+                                            <span class="vendor">श्याम व्यापारी</span>
+                                            <span class="rating">⭐ 4.6</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Product Detail Demo -->
+                        <div class="screen-content detail-demo" id="detailDemo">
+                            <div class="demo-screen-header">
+                                <div class="demo-nav-header">
+                                    <button class="demo-back-btn" onclick="goToDemoScreen('listing')">←</button>
+                                    <h3>उत्पाद विवरण</h3>
+                                    <button class="demo-share-btn">📤</button>
+                                </div>
+                            </div>
+                            
+                            <div class="demo-product-hero">
+                                <div class="hero-image">🍅</div>
+                                <h4>टमाटर - A ग्रेड</h4>
+                                <p class="hero-vendor">राम किसान • ⭐ 4.8</p>
+                            </div>
+                            
+                            <div class="demo-ai-pricing">
+                                <div class="ai-header">
+                                    <span class="ai-icon">🤖</span>
+                                    <span class="ai-title">AI मूल्य सुझाव</span>
+                                </div>
+                                <div class="price-range">
+                                    <div class="price-bar">
+                                        <span class="price-min">₹22</span>
+                                        <span class="price-current">₹25</span>
+                                        <span class="price-max">₹28</span>
+                                    </div>
+                                    <div class="price-status good">
+                                        <span class="status-icon">✅</span>
+                                        <span class="status-text">यह मूल्य उचित है</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="demo-actions">
+                                <button class="demo-contact-btn" onclick="goToDemoScreen('chat')">
+                                    <span class="btn-icon">📞</span>
+                                    संपर्क करें
+                                </button>
+                                <button class="demo-cart-btn">
+                                    <span class="btn-icon">🛒</span>
+                                    कार्ट में डालें
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Chat Demo -->
+                        <div class="screen-content chat-demo" id="chatDemo">
+                            <div class="demo-screen-header">
+                                <div class="demo-chat-header">
+                                    <button class="demo-back-btn" onclick="goToDemoScreen('detail')">←</button>
+                                    <div class="chat-user">
+                                        <span class="user-avatar">👨‍🌾</span>
+                                        <div class="user-info">
+                                            <span class="user-name">राम किसान</span>
+                                            <span class="user-status">🟢 ऑनलाइन</span>
+                                        </div>
+                                    </div>
+                                    <div class="language-toggle">
+                                        <span class="lang-indicator">हिं ⇄ ગુજ</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="demo-ai-label">
+                                <span class="ai-icon">🤖</span>
+                                <span class="ai-text">AI-assisted multilingual negotiation</span>
+                            </div>
+                            
+                            <div class="demo-chat-messages">
+                                <div class="demo-message vendor">
+                                    <div class="message-content">
+                                        <p class="original">नमस्ते! आपको टमाटर चाहिए?</p>
+                                        <p class="translated">નમસ્તે! તમને ટમેટાં જોઈએ છે?</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="demo-ai-assistance">
+                                    <div class="ai-badge">🤖 AI सहायता</div>
+                                    <p class="ai-tip">विक्रेता की रेटिंग अच्छी है (4.8⭐)</p>
+                                </div>
+                                
+                                <div class="demo-message buyer">
+                                    <div class="message-content">
+                                        <p class="original">હા, મને 50 કિલો જોઈએ છે. કિંમત?</p>
+                                        <p class="translated">हां, मुझे 50 किलो चाहिए। कीमत?</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="demo-price-analysis">
+                                    <div class="analysis-header">🤖 मूल्य विश्लेषण</div>
+                                    <div class="analysis-content">
+                                        <p class="analysis-tip">₹25-27/किलो उचित कीमत होगी</p>
+                                        <button class="quick-reply" onclick="showNegotiationSuccess()">
+                                            "₹25/किलो में दे सकते हैं?"
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="demo-chat-input">
+                                <input type="text" placeholder="संदेश लिखें..." class="chat-input">
+                                <button class="send-btn">➤</button>
+                            </div>
+                        </div>
+
+                        <!-- Success Demo -->
+                        <div class="screen-content success-demo" id="successDemo">
+                            <div class="demo-success-content">
+                                <div class="success-icon">🎉</div>
+                                <h3>सौदा पक्का!</h3>
+                                <div class="success-details">
+                                    <div class="deal-summary">
+                                        <p><strong>उत्पाद:</strong> टमाटर - A ग्रेड</p>
+                                        <p><strong>मात्रा:</strong> 50 किलो</p>
+                                        <p><strong>कीमत:</strong> ₹25/किलो</p>
+                                        <p class="total"><strong>कुल:</strong> ₹1,250</p>
+                                    </div>
+                                    <div class="success-benefits">
+                                        <div class="benefit">
+                                            <span class="benefit-icon">💰</span>
+                                            <span class="benefit-text">₹250 बचत</span>
+                                        </div>
+                                        <div class="benefit">
+                                            <span class="benefit-icon">⚡</span>
+                                            <span class="benefit-text">3 मिनट में सौदा</span>
+                                        </div>
+                                        <div class="benefit">
+                                            <span class="benefit-icon">🤝</span>
+                                            <span class="benefit-text">निष्पक्ष मूल्य</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="demo-restart-btn" onclick="restartDemo()">
+                                    <span class="btn-icon">🔄</span>
+                                    फिर से देखें
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Phone Navigation -->
+                    <div class="phone-nav">
+                        <button class="nav-dot" onclick="goToDemoScreen('home')" data-screen="home"></button>
+                        <button class="nav-dot" onclick="goToDemoScreen('listing')" data-screen="listing"></button>
+                        <button class="nav-dot" onclick="goToDemoScreen('detail')" data-screen="detail"></button>
+                        <button class="nav-dot" onclick="goToDemoScreen('chat')" data-screen="chat"></button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature Demonstrations -->
+            <div class="feature-demos" id="featureDemo">
+                <!-- Multilingual Demo -->
+                <div class="feature-demo-content multilingual-demo" id="multilingualDemo">
+                    <div class="demo-section-header">
+                        <h3>🗣️ Multilingual Magic</h3>
+                        <p>Breaking language barriers in real-time</p>
+                    </div>
+                    
+                    <div class="language-showcase">
+                        <div class="language-example">
+                            <div class="lang-input">
+                                <span class="lang-flag">🇮🇳</span>
+                                <span class="lang-text">टमाटर की कीमत क्या है?</span>
+                                <span class="lang-label">Hindi</span>
+                            </div>
+                            <div class="translation-arrow">⬇️ AI Translation</div>
+                            <div class="lang-output">
+                                <span class="lang-flag">🇮🇳</span>
+                                <span class="lang-text">ટમેટાંની કિંમત શું છે?</span>
+                                <span class="lang-label">Gujarati</span>
+                            </div>
+                        </div>
+                        
+                        <div class="supported-languages">
+                            <h4>Supported Languages</h4>
+                            <div class="lang-grid">
+                                <span class="lang-item">🇮🇳 हिंदी</span>
+                                <span class="lang-item">🇬🇧 English</span>
+                                <span class="lang-item">🇮🇳 ਪੰਜਾਬੀ</span>
+                                <span class="lang-item">🇮🇳 ગુજરાતી</span>
+                                <span class="lang-item">🇮🇳 मराठी</span>
+                                <span class="lang-item">🇮🇳 தமிழ்</span>
+                                <span class="lang-item">🇮🇳 తెలుగు</span>
+                                <span class="lang-item">🇮🇳 বাংলা</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- AI Pricing Demo -->
+                <div class="feature-demo-content ai-pricing-demo" id="aiPricingDemo">
+                    <div class="demo-section-header">
+                        <h3>🤖 AI-Powered Fair Pricing</h3>
+                        <p>Smart market analysis for transparent deals</p>
+                    </div>
+                    
+                    <div class="pricing-showcase">
+                        <div class="market-analysis">
+                            <div class="analysis-card">
+                                <h4>Market Data Analysis</h4>
+                                <div class="data-points">
+                                    <div class="data-point">
+                                        <span class="data-icon">📊</span>
+                                        <span class="data-text">Real-time market rates</span>
+                                    </div>
+                                    <div class="data-point">
+                                        <span class="data-icon">🌡️</span>
+                                        <span class="data-text">Weather impact analysis</span>
+                                    </div>
+                                    <div class="data-point">
+                                        <span class="data-icon">🚛</span>
+                                        <span class="data-text">Transportation costs</span>
+                                    </div>
+                                    <div class="data-point">
+                                        <span class="data-icon">📈</span>
+                                        <span class="data-text">Demand forecasting</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="price-recommendation">
+                                <h4>AI Recommendation</h4>
+                                <div class="price-range-visual">
+                                    <div class="price-scale">
+                                        <span class="scale-min">₹20</span>
+                                        <div class="scale-bar">
+                                            <div class="fair-range"></div>
+                                            <div class="current-price-marker">₹25</div>
+                                        </div>
+                                        <span class="scale-max">₹30</span>
+                                    </div>
+                                    <div class="recommendation-text">
+                                        <span class="rec-icon">✅</span>
+                                        <span class="rec-text">Fair price within market range</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Trust System Demo -->
+                <div class="feature-demo-content trust-demo" id="trustDemo">
+                    <div class="demo-section-header">
+                        <h3>🤝 Trust & Transparency</h3>
+                        <p>Building confidence in every transaction</p>
+                    </div>
+                    
+                    <div class="trust-showcase">
+                        <div class="trust-indicators">
+                            <div class="trust-card">
+                                <div class="trust-icon">✅</div>
+                                <h4>Verified Vendors</h4>
+                                <p>KYC completed, FSSAI licensed</p>
+                                <div class="trust-stat">98% verified</div>
+                            </div>
+                            
+                            <div class="trust-card">
+                                <div class="trust-icon">⭐</div>
+                                <h4>Rating System</h4>
+                                <p>Community-driven feedback</p>
+                                <div class="trust-stat">4.8/5 avg</div>
+                            </div>
+                            
+                            <div class="trust-card">
+                                <div class="trust-icon">🛡️</div>
+                                <h4>Secure Payments</h4>
+                                <p>UPI, bank transfer protection</p>
+                                <div class="trust-stat">99.9% secure</div>
+                            </div>
+                        </div>
+                        
+                        <div class="transparency-features">
+                            <h4>Transparency Features</h4>
+                            <div class="transparency-list">
+                                <div class="transparency-item">
+                                    <span class="trans-icon">📊</span>
+                                    <span class="trans-text">Open market data</span>
+                                </div>
+                                <div class="transparency-item">
+                                    <span class="trans-icon">💬</span>
+                                    <span class="trans-text">Public reviews</span>
+                                </div>
+                                <div class="transparency-item">
+                                    <span class="trans-icon">📱</span>
+                                    <span class="trans-text">Transaction history</span>
+                                </div>
+                                <div class="transparency-item">
+                                    <span class="trans-icon">🔍</span>
+                                    <span class="trans-text">Quality verification</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Impact Statistics -->
+            <div class="demo-impact">
+                <div class="impact-header">
+                    <h3>🌟 Real Impact on Local Trade</h3>
+                    <p>Transforming lives across India</p>
+                </div>
+                
+                <div class="impact-stats">
+                    <div class="impact-stat">
+                        <div class="stat-number" data-target="250000">0</div>
+                        <div class="stat-label">Happy Farmers & Traders</div>
+                    </div>
+                    <div class="impact-stat">
+                        <div class="stat-number" data-target="50">0</div>
+                        <div class="stat-label">Crores in Fair Trade</div>
+                    </div>
+                    <div class="impact-stat">
+                        <div class="stat-number" data-target="95">0</div>
+                        <div class="stat-label">% Successful Negotiations</div>
+                    </div>
+                    <div class="impact-stat">
+                        <div class="stat-number" data-target="8">0</div>
+                        <div class="stat-label">Indian Languages</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Call to Action -->
+            <div class="demo-cta-section">
+                <div class="cta-content">
+                    <h3>Ready to Transform Local Trade?</h3>
+                    <p>Join thousands of farmers and traders already benefiting from AI-powered multilingual commerce</p>
+                    
+                    <div class="cta-buttons">
+                        <button class="cta-primary" onclick="startFullDemo()">
+                            <span class="btn-icon">🚀</span>
+                            Start Full Experience
+                        </button>
+                        <button class="cta-secondary" onclick="learnMore()">
+                            <span class="btn-icon">📖</span>
+                            Learn More
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Demo Controls -->
+        <div class="demo-controls">
+            <button class="control-btn" onclick="toggleAutoPlay()" id="autoPlayBtn">
+                <span class="control-icon">⏸️</span>
+                <span class="control-label">Auto Play</span>
+            </button>
+            <button class="control-btn" onclick="resetDemo()">
+                <span class="control-icon">🔄</span>
+                <span class="control-label">Reset</span>
+            </button>
+            <button class="control-btn" onclick="shareDemo()">
+                <span class="control-icon">📤</span>
+                <span class="control-label">Share</span>
+            </button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="demo.js"></script>
+</body>
+</html>

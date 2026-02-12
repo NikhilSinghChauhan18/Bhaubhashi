@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UI Flow - बहुभाषी मंडी</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- UI Flow Documentation Screen -->
+    <div id="ui-flow-screen" class="screen active">
+        <!-- Header -->
+        <header class="flow-header">
+            <button class="back-btn" onclick="goBack()">←</button>
+            <div class="header-content">
+                <h1>UI Flow Guide</h1>
+                <p class="header-subtitle">Complete Mobile-First User Journey</p>
+            </div>
+            <button class="share-flow-btn" onclick="shareFlow()">📤</button>
+        </header>
+
+        <main class="flow-content">
+            <!-- Flow Overview -->
+            <div class="flow-overview">
+                <div class="overview-header">
+                    <h2>🚀 Bahubhashi Mandi UI Flow</h2>
+                    <p class="overview-description">
+                        A comprehensive mobile-first experience designed for Indian local markets, 
+                        bridging language barriers with AI-powered translation and fair pricing.
+                    </p>
+                </div>
+
+                <!-- Key Features Summary -->
+                <div class="features-summary">
+                    <div class="feature-badge">
+                        <span class="badge-icon">📱</span>
+                        <span class="badge-text">Mobile-First</span>
+                    </div>
+                    <div class="feature-badge">
+                        <span class="badge-icon">🗣️</span>
+                        <span class="badge-text">8 Languages</span>
+                    </div>
+                    <div class="feature-badge">
+                        <span class="badge-icon">🤖</span>
+                        <span class="badge-text">AI-Powered</span>
+                    </div>
+                    <div class="feature-badge">
+                        <span class="badge-icon">🤝</span>
+                        <span class="badge-text">Fair Trade</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- User Journey Map -->
+            <div class="journey-map">
+                <h3>Complete User Journey</h3>
+                
+                <!-- Entry Point -->
+                <div class="journey-step entry-point">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <div class="step-header">
+                            <h4>🏠 Home Screen (index.html)</h4>
+                            <span class="step-type">Entry Point</span>
+                        </div>
+                        <div class="step-description">
+                            <p><strong>Purpose:</strong> Welcome users and establish user type</p>
+                            <div class="step-features">
+                                <div class="feature-item">
+                                    <span class="feature-icon">👨‍🌾</span>
+                                    <span class="feature-text">Vendor Selection</span>
+                                </div>
+                                <div class="feature-item">
+                                    <span class="feature-icon">🛒</span>
+                                    <span class="feature-text">Buyer Selection</span>
+                                </div>
+                                <div class="feature-item">
+                                    <span class="feature-icon">🚀</span>
+                                    <span class="feature-text">Start Trading CTA</span>
+                                </div>
+                                <div class="feature-item">
+                                    <span class="feature-icon">🌐</span>
+                                    <span class="feature-text">Language Selector</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="step-actions">
+                            <div class="action-flow">
+                                <span class="action-text">Select User Type</span>
+                                <span class="flow-arrow">→</span>
+                                <span class="next-screen">Product Listing</span>
+                            </div>
+                            <div class="action-flow">
+                                <span class="action-text">Start Trading</span>
+                                <span class="flow-arrow">→</span>
+                                <span class="next-screen">Product Listing</span>
+                            </div>
+                            <div class="action-flow">
+                                <span class="action-text">Language Change</span>
+                                <span class="flow-arrow">→</span>
+                                <span class="next-screen">Language Selection</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Language Selection -->
+                <div class="journey-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <div class="step-header">
+                            <h4>🌐 Language Selection</h4>
+                            <span class="step-type">Configuration</span>
+                        </div>
+                        <div class="step-description">
+                            <p><strong>Purpose:</strong> Enable multilingual experience</p>
+                            <div class="language-grid-preview">
+                                <div class="lang-item">🇮🇳 हिंदी</div>
+                                <div class="lang-item">🇬🇧 English</div>
+                                <div class="lang-item">🇮🇳 ਪੰਜਾਬੀ</div>
+                                <div class="lang-item">🇮🇳 ગુજરાતી</div>
+                                <div class="lang-item">🇮🇳 मराठी</div>
+                                <div class="lang-item">🇮🇳 தமிழ்</div>
+                                <div class="lang-item">🇮🇳 తెలుగు</div>
+                                <div class="lang-item">🇮🇳 বাংলা</div>
+                            </div>
+                        </div>
+                        <div class="step-actions">
+                            <div class="action-flow">
+                                <span class="action-text">Select Language</span>
+                                <span class="flow-arrow">→</span>
+                                <span class="next-screen">Return to Previous</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Listing -->
+                <div class="journey-step main-flow">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <div class="step-header">
+                            <h4>🏪 Product Listing (product-listing.html)</h4>
+                            <span class="step-type">Core Experience</span>
+                        </div>
+                        <div class="step-description">
+                            <p><strong>Purpose:</strong> Browse and discover mandi products</p>
+                            <div class="step-features">
+                                <div class="feature-item">
+                                    <span class="feature-icon">🔍</span>
+                                    <span class="feature-text">Search & Filters</span>
+                                </div>
+                                <div class="feature-item">
+                                    <span class="feature-icon">🏷️</span>
+                                    <span class="feature-text">Category Chips</span>
+                                </div>
+                                <div class="feature-item">
+                                    <span class="feature-icon">📊</span>
+                                    <span class="feature-text">Price Trends</span>
+                                </div>
+                                <div class="feature-item">
+                                    <span class="feature-icon">⭐</span>
+                                    <span class="feature-text">Vendor Ratings</span>
+                                </div>
+                            </div>
+                            <div class="product-preview">
+                                <div class="preview-card">
+                                    <div class="preview-icon">🍅</div>
+                                    <div class="preview-info">
+                                        <span class="preview-name">टमाटर</span>
+                                        <span class="preview-price">₹25/किलो</span>
+                                        <span class="preview-trend up">↗ +5%</span>
+                                    </div>
+                                </div>
+                                <div class="preview-card">
+                                    <div class="preview-icon">🧅</div>
+                                    <div class="preview-info">
+                                        <span class="preview-name">प्याज</span>
+                                        <span class="preview-price">₹30/किलो</span>
+                                        <span class="preview-trend down">↘ -3%</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="step-actions">
+                            <div class="action-flow">
+                                <span class="action-text">Tap Product</span>
+                                <span class="flow-arrow">→</span>
+                                <span class="next-screen">Product Detail</span>
+                            </div>
+                            <div class="action-flow">
+                                <span class="action-text">Bottom Nav</span>
+                                <span class="flow-arrow">→</span>
+                                <span class="next-screen">Dashboard/Chat/Impact</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Detail -->
+                <div class="journey-step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <div class="step-header">
+                            <h4>📋 Product Detail (product-detail.html)</h4>
+                            <span class="step-type">Decision Point</span>
+                        </div>
+                        <div class="step-description">
+                            <p><strong>Purpose:</strong> Detailed product info with AI pricing</p>
+                            <div class="step-features">
+                                <div class="feature-item">
+                                    <span class="feature-icon">🤖</span>
+                                    <span class="feature-text">AI Price Range</span>
+                                </div>
+                                <div class="feature-item">
+                                    <span class="feature-icon">📊</span>
+                                    <span class="feature-text">Market Insights</span>
+                                </div>
+                                <div class="feature-item">
+                                    <span class="feature-icon">🛡️</span>
+                                    <span class="feature-text">Trust Indicators</span>
+                                </div>
+                                <div class="feature-item">
+                                    <span class="feature-icon">⭐</span>
+                                    <span class="feature-text">Customer Reviews</span>
+                                </div>
+                            </div>
+                            <div class="ai-pricing-preview">
+                                <div class="pricing-bar">
+                                    <span class="price-min">₹22</span>
+                                    <span class="price-current">₹25</span>
+                                    <span class="price-max">₹28</span>
+                                </div>
+                                <div class="pricing-status">✅ यह मूल्य उचित है</div>
+                            </div>
+                        </div>
+                        <div class="step-actions">
+                            <div class="action-flow">
+                                <span class="action-text">Contact Vendor</span>
+                                <span class="flow-arrow">→</span>
+                                <span class="next-screen">Chat Interface</span>
+                            </div>
+                            <div class="action-flow">
+                                <span class="action-text">Add to Cart</span>
+                                <span class="flow-arrow">→</span>
+                                <span class="next-screen">Cart/Checkout</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Chat Interface -->
+                <div class="journey-step highlight">
+                    <div class="step-number">5</div>
+                    <div class="step-content">
+                        <div class="step-header">
+                            <h4>💬 Chat Interface (chat.html)</h4>
+                            <span class="step-type">Core Innovation</span>
+                        </div>
+                        <div class="step-description">
+                            <p><strong>Purpose:</strong> AI-powered multilingual negotiation</p>
+                            <div class="step-features">
+                                <div class="feature-item">
+                                    <span class="feature-icon">🔄</span>
+                                    <span class="feature-text">Real-time Translation</span>
+                                </div>
+                                <div class="feature-item">
+                                    <span class="feature-icon">🤖</span>
+                                    <span class="feature-text">AI Negotiation Help</span>
+                                </div>
+                                <div class="feature-item">
+                                    <span class="feature-icon">⚡</span>
+                                    <span class="feature-text">Quick Replies</span>
+                                </div>
+                                <div class="feature-item">
+                                    <span class="feature-icon">🎤</span>
+                                    <span class="feature-text">Voice Input</span>
+                                </div>
+                            </div>
+                            <div class="chat-preview">
+                                <div class="chat-message vendor">
+                                    <div class="msg-content">
+                                        <div class="msg-original">नमस्ते! आपको टमाटर चाहिए?</div>
+                                        <div class="msg-translated">નમસ્તે! તમને ટમેટાં જોઈએ છે?</div>
+                                    </div>
+                                </div>
+                                <div class="ai-assistance">
+                                    <div class="ai-badge">🤖 AI सहायता</div>
+                                    <div class="ai-tip">विक्रेता की रेटिंग अच्छी है (4.8⭐)</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="step-actions">
+                            <div class="action-flow">
+                                <span class="action-text">Successful Deal</span>
+                                <span class="flow-arrow">→</span>
+                                <span class="next-screen">Payment/Confirmation</span>
+                            </div>
+                            <div class="action-flow">
+                                <span class="action-text">Continue Browsing</span>
+                                <span class="flow-arrow">→</span>
+                                <span class="next-screen">Product Listing</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dashboard -->
+                <div class="journey-step">
+                    <div class="step-number">6</div>
+                    <div class="step-content">
+                        <div class="step-header">
+                            <h4>📊 Dashboard (dashboard.html)</h4>
+                            <span class="step-type">Analytics Hub</span>
+                        </div>
+                        <div class="step-description">
+                            <p><strong>Purpose:</strong> User analytics and market insights</p>
+                            <div class="step-features">
+                                <div class="feature-item">
+                                    <span class="feature-icon">👤</span>
+                                    <span class="feature-text">User Profile</span>
+                                </div>
+                                <div class="feature-item">
+                                    <span class="feature-icon">💰</span>
+                                    <span class="feature-text">Fair Price Indicators</span>
+                                </div>
+                                <div class="feature-item">
+                                    <span class="feature-icon">🏆</span>
+                                    <span class="feature-text">Trust Score</span>
+                                </div>
+                                <div class="feature-item">
+                                    <span class="feature-icon">📈</span>
+                                    <span class="feature-text">Market Trends</span>
+                                </div>
+                            </div>
+                            <div class="dashboard-preview">
+                                <div class="trust-score">
+                                    <div class="score-circle">4.8</div>
+                                    <div class="score-label">Trust Score</div>
+                                </div>
+                                <div class="recent-activity">
+                                    <div class="activity-item">💰 टमाटर बेचा - ₹1,250</div>
+                                    <div class="activity-item">⭐ नई समीक्षा मिली</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="step-actions">
+                            <div class="action-flow">
+                                <span class="action-text">Quick Actions</span>
+                                <span class="flow-arrow">→</span>
+                                <span class="next-screen">Various Features</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Impact Screen -->
+                <div class="journey-step">
+                    <div class="step-number">7</div>
+                    <div class="step-content">
+                        <div class="step-header">
+                            <h4>🌟 Impact Summary (impact.html)</h4>
+                            <span class="step-type">Social Proof</span>
+                        </div>
+                        <div class="step-description">
+                            <p><strong>Purpose:</strong> Showcase platform benefits and community impact</p>
+                            <div class="step-features">
+                                <div class="feature-item">
+                                    <span class="feature-icon">🗣️</span>
+                                    <span class="feature-text">Multilingual Inclusion</span>
+                                </div>
+                                <div class="feature-item">
+                                    <span class="feature-icon">💰</span>
+                                    <span class="feature-text">Fair Price Discovery</span>
+                                </div>
+                                <div class="feature-item">
+                                    <span class="feature-icon">🤝</span>
+                                    <span class="feature-text">Transparent Negotiation</span>
+                                </div>
+                                <div class="feature-item">
+                                    <span class="feature-icon">📊</span>
+                                    <span class="feature-text">Community Stats</span>
+                                </div>
+                            </div>
+                            <div class="impact-preview">
+                                <div class="impact-stat">
+                                    <div class="stat-number">2.5 लाख+</div>
+                                    <div class="stat-label">Happy Users</div>
+                                </div>
+                                <div class="impact-stat">
+                                    <div class="stat-number">₹50 करोड़+</div>
+                                    <div class="stat-label">Fair Trade</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="step-actions">
+                            <div class="action-flow">
+                                <span class="action-text">Join Community</span>
+                                <span class="flow-arrow">→</span>
+                                <span class="next-screen">Social Channels</span>
+                            </div>
+                            <div class="action-flow">
+                                <span class="action-text">Share Success</span>
+                                <span class="flow-arrow">→</span>
+                                <span class="next-screen">External Sharing</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Navigation Flow -->
+            <div class="navigation-flow">
+                <h3>Navigation Architecture</h3>
+                
+                <div class="nav-structure">
+                    <div class="nav-level primary">
+                        <h4>Primary Navigation (Bottom Bar)</h4>
+                        <div class="nav-items">
+                            <div class="nav-item">
+                                <span class="nav-icon">🏪</span>
+                                <span class="nav-label">मंडी</span>
+                                <span class="nav-desc">Product Listing</span>
+                            </div>
+                            <div class="nav-item">
+                                <span class="nav-icon">📊</span>
+                                <span class="nav-label">डैशबोर्ड</span>
+                                <span class="nav-desc">Analytics Hub</span>
+                            </div>
+                            <div class="nav-item">
+                                <span class="nav-icon">💬</span>
+                                <span class="nav-label">चैट</span>
+                                <span class="nav-desc">Communication</span>
+                            </div>
+                            <div class="nav-item">
+                                <span class="nav-icon">🌟</span>
+                                <span class="nav-label">प्रभाव</span>
+                                <span class="nav-desc">Impact & Community</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="nav-level secondary">
+                        <h4>Secondary Navigation</h4>
+                        <div class="nav-flows">
+                            <div class="nav-flow">
+                                <span class="flow-start">Home</span>
+                                <span class="flow-arrow">→</span>
+                                <span class="flow-end">Language Selection</span>
+                            </div>
+                            <div class="nav-flow">
+                                <span class="flow-start">Product Listing</span>
+                                <span class="flow-arrow">→</span>
+                                <span class="flow-end">Product Detail</span>
+                            </div>
+                            <div class="nav-flow">
+                                <span class="flow-start">Product Detail</span>
+                                <span class="flow-arrow">→</span>
+                                <span class="flow-end">Chat Interface</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Design Principles -->
+            <div class="design-principles">
+                <h3>Mobile-First Design Principles</h3>
+                
+                <div class="principles-grid">
+                    <div class="principle-card">
+                        <div class="principle-icon">📱</div>
+                        <h4>Touch-First Interface</h4>
+                        <ul>
+                            <li>Large touch targets (44px minimum)</li>
+                            <li>Thumb-friendly navigation</li>
+                            <li>Swipe gestures support</li>
+                            <li>Bottom navigation for easy reach</li>
+                        </ul>
+                    </div>
+
+                    <div class="principle-card">
+                        <div class="principle-icon">🌐</div>
+                        <h4>Cultural Adaptation</h4>
+                        <ul>
+                            <li>Right-to-left script support</li>
+                            <li>Local measurement units</li>
+                            <li>Regional color preferences</li>
+                            <li>Culturally appropriate icons</li>
+                        </ul>
+                    </div>
+
+                    <div class="principle-card">
+                        <div class="principle-icon">⚡</div>
+                        <h4>Performance Optimized</h4>
+                        <ul>
+                            <li>Minimal data usage</li>
+                            <li>Offline functionality</li>
+                            <li>Fast loading times</li>
+                            <li>Progressive enhancement</li>
+                        </ul>
+                    </div>
+
+                    <div class="principle-card">
+                        <div class="principle-icon">♿</div>
+                        <h4>Accessibility First</h4>
+                        <ul>
+                            <li>Screen reader compatibility</li>
+                            <li>High contrast support</li>
+                            <li>Keyboard navigation</li>
+                            <li>Voice input options</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Technical Architecture -->
+            <div class="technical-architecture">
+                <h3>Technical Implementation</h3>
+                
+                <div class="tech-stack">
+                    <div class="tech-category">
+                        <h4>Frontend</h4>
+                        <div class="tech-items">
+                            <span class="tech-item">HTML5</span>
+                            <span class="tech-item">CSS3 Grid/Flexbox</span>
+                            <span class="tech-item">Vanilla JavaScript</span>
+                            <span class="tech-item">Progressive Web App</span>
+                        </div>
+                    </div>
+
+                    <div class="tech-category">
+                        <h4>Fonts & Icons</h4>
+                        <div class="tech-items">
+                            <span class="tech-item">Noto Sans Devanagari</span>
+                            <span class="tech-item">Emoji Icons</span>
+                            <span class="tech-item">Unicode Support</span>
+                            <span class="tech-item">Web Font Loading</span>
+                        </div>
+                    </div>
+
+                    <div class="tech-category">
+                        <h4>AI Features</h4>
+                        <div class="tech-items">
+                            <span class="tech-item">Translation API</span>
+                            <span class="tech-item">Price Prediction</span>
+                            <span class="tech-item">Market Analysis</span>
+                            <span class="tech-item">Negotiation Assistant</span>
+                        </div>
+                    </div>
+
+                    <div class="tech-category">
+                        <h4>Performance</h4>
+                        <div class="tech-items">
+                            <span class="tech-item">Service Workers</span>
+                            <span class="tech-item">Local Storage</span>
+                            <span class="tech-item">Image Optimization</span>
+                            <span class="tech-item">Lazy Loading</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Success Metrics -->
+            <div class="success-metrics">
+                <h3>Success Metrics & KPIs</h3>
+                
+                <div class="metrics-grid">
+                    <div class="metric-category">
+                        <h4>User Engagement</h4>
+                        <div class="metric-items">
+                            <div class="metric-item">
+                                <span class="metric-value">95%</span>
+                                <span class="metric-label">Successful Conversations</span>
+                            </div>
+                            <div class="metric-item">
+                                <span class="metric-value">5 min</span>
+                                <span class="metric-label">Average Deal Time</span>
+                            </div>
+                            <div class="metric-item">
+                                <span class="metric-value">80%</span>
+                                <span class="metric-label">First-time Success</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="metric-category">
+                        <h4>Business Impact</h4>
+                        <div class="metric-items">
+                            <div class="metric-item">
+                                <span class="metric-value">15%</span>
+                                <span class="metric-label">Better Prices</span>
+                            </div>
+                            <div class="metric-item">
+                                <span class="metric-value">90%</span>
+                                <span class="metric-label">Fair Deals</span>
+                            </div>
+                            <div class="metric-item">
+                                <span class="metric-value">4.8/5</span>
+                                <span class="metric-label">User Rating</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="metric-category">
+                        <h4>Technical Performance</h4>
+                        <div class="metric-items">
+                            <div class="metric-item">
+                                <span class="metric-value">&lt;2s</span>
+                                <span class="metric-label">Load Time</span>
+                            </div>
+                            <div class="metric-item">
+                                <span class="metric-value">99.5%</span>
+                                <span class="metric-label">Uptime</span>
+                            </div>
+                            <div class="metric-item">
+                                <span class="metric-value">&lt;50KB</span>
+                                <span class="metric-label">Initial Bundle</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Bottom Navigation -->
+        <nav class="bottom-nav">
+            <button class="nav-item" onclick="showProductListing()">
+                <span class="nav-icon">🏪</span>
+                <span class="nav-label">मंडी</span>
+            </button>
+            <button class="nav-item" onclick="showDashboard()">
+                <span class="nav-icon">📊</span>
+                <span class="nav-label">डैशबोर्ड</span>
+            </button>
+            <button class="nav-item" onclick="openChat()">
+                <span class="nav-icon">💬</span>
+                <span class="nav-label">चैट</span>
+            </button>
+            <button class="nav-item" onclick="showImpact()">
+                <span class="nav-icon">🌟</span>
+                <span class="nav-label">प्रभाव</span>
+            </button>
+        </nav>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="ui-flow.js"></script>
+</body>
+</html>

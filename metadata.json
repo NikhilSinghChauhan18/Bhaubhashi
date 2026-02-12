@@ -1,0 +1,101 @@
+{
+  "project": {
+    "name": "Bahubhashi Mandi",
+    "fullName": "Bahubhashi Mandi – Bridging Languages in Local Trade with AI",
+    "version": "1.0.0",
+    "type": "web-application",
+    "platform": "mobile-first-web",
+    "created": "2026-01-26",
+    "lastModified": "2026-01-26"
+  },
+  "design": {
+    "approach": "mobile-first",
+    "theme": "bharat-centric",
+    "colorScheme": "saffron-orange",
+    "typography": "noto-sans-devanagari",
+    "iconStrategy": "emoji-based",
+    "layoutSystem": "css-grid-flexbox"
+  },
+  "features": {
+    "screens": [
+      {
+        "id": "home",
+        "name": "Home Screen",
+        "description": "Main landing page with categories and AI features",
+        "components": ["header", "search", "categories", "ai-features"]
+      },
+      {
+        "id": "product-listing",
+        "name": "Product Listing",
+        "description": "Category-based product list with filters",
+        "components": ["header", "filters", "product-list"]
+      },
+      {
+        "id": "product-detail",
+        "name": "Product Detail",
+        "description": "Detailed product view with AI price recommendations",
+        "components": ["header", "product-hero", "ai-price-section", "details", "actions"]
+      },
+      {
+        "id": "settings",
+        "name": "Settings",
+        "description": "User preferences and configuration",
+        "components": ["header", "language-settings", "location-settings", "ai-settings", "data-settings"]
+      }
+    ],
+    "ai": {
+      "priceRecommendation": true,
+      "languageTranslation": true,
+      "marketInsights": true,
+      "smartCategorization": true
+    },
+    "languages": ["hindi", "english", "bengali", "telugu", "marathi", "tamil", "gujarati"],
+    "offline": true,
+    "pwa": true
+  },
+  "technical": {
+    "framework": "vanilla-web",
+    "dependencies": {
+      "fonts": ["Noto Sans Devanagari"],
+      "external": []
+    },
+    "files": {
+      "html": ["index.html"],
+      "css": ["styles.css"],
+      "javascript": ["script.js"],
+      "config": ["settings.json"],
+      "documentation": [
+        "generations/ui-components.md",
+        "prompt-history/design-requirements.md",
+        "metadata.json"
+      ]
+    },
+    "performance": {
+      "bundleSize": "< 100kb",
+      "loadTime": "< 2s",
+      "firstPaint": "< 1s",
+      "interactive": "< 3s"
+    }
+  },
+  "target": {
+    "users": "local-traders-farmers-buyers",
+    "regions": ["india"],
+    "devices": ["mobile", "tablet"],
+    "browsers": ["chrome", "firefox", "safari", "edge"],
+    "connectivity": ["2g", "3g", "4g", "wifi"]
+  },
+  "accessibility": {
+    "wcag": "AA",
+    "screenReader": true,
+    "keyboardNavigation": true,
+    "highContrast": true,
+    "fontSize": "scalable"
+  },
+  "localization": {
+    "rtl": false,
+    "numberFormat": "indian",
+    "currency": "INR",
+    "dateFormat": "dd/mm/yyyy",
+    "regions": ["north-india", "west-india", "east-india", "south-india"]
+  }
+}

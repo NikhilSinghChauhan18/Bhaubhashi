@@ -1,0 +1,155 @@
+{
+  "app": {
+    "name": "Bahubhashi Mandi",
+    "version": "1.0.0",
+    "description": "Bridging Languages in Local Trade with AI",
+    "theme": "bharat-centric"
+  },
+  "ui": {
+    "mobileFirst": true,
+    "lowBandwidth": true,
+    "primaryColor": "#ff6b35",
+    "secondaryColor": "#f7931e",
+    "fontFamily": "Noto Sans Devanagari",
+    "maxImageSize": "50kb",
+    "enableAnimations": false
+  },
+  "languages": {
+    "default": "hi",
+    "supported": [
+      {
+        "code": "hi",
+        "name": "हिंदी",
+        "englishName": "Hindi",
+        "rtl": false
+      },
+      {
+        "code": "en",
+        "name": "English",
+        "englishName": "English",
+        "rtl": false
+      },
+      {
+        "code": "bn",
+        "name": "বাংলা",
+        "englishName": "Bengali",
+        "rtl": false
+      },
+      {
+        "code": "te",
+        "name": "తెలుగు",
+        "englishName": "Telugu",
+        "rtl": false
+      },
+      {
+        "code": "mr",
+        "name": "मराठी",
+        "englishName": "Marathi",
+        "rtl": false
+      },
+      {
+        "code": "ta",
+        "name": "தமிழ்",
+        "englishName": "Tamil",
+        "rtl": false
+      },
+      {
+        "code": "gu",
+        "name": "ગુજરાતી",
+        "englishName": "Gujarati",
+        "rtl": false
+      }
+    ]
+  },
+  "ai": {
+    "priceRecommendation": {
+      "enabled": true,
+      "factors": [
+        "seasonal_availability",
+        "transport_cost",
+        "local_demand",
+        "quality_grade",
+        "market_trends"
+      ],
+      "updateFrequency": "daily"
+    },
+    "languageTranslation": {
+      "enabled": true,
+      "autoDetect": true,
+      "offlineMode": true
+    }
+  },
+  "categories": [
+    {
+      "id": "vegetables",
+      "name": {
+        "hi": "सब्जियां",
+        "en": "Vegetables"
+      },
+      "icon": "🥬",
+      "subcategories": ["leafy", "root", "fruit_vegetables"]
+    },
+    {
+      "id": "fruits",
+      "name": {
+        "hi": "फल",
+        "en": "Fruits"
+      },
+      "icon": "🍎",
+      "subcategories": ["seasonal", "citrus", "tropical"]
+    },
+    {
+      "id": "grains",
+      "name": {
+        "hi": "अनाज",
+        "en": "Grains"
+      },
+      "icon": "🌾",
+      "subcategories": ["rice", "wheat", "pulses"]
+    },
+    {
+      "id": "spices",
+      "name": {
+        "hi": "मसाले",
+        "en": "Spices"
+      },
+      "icon": "🌶️",
+      "subcategories": ["whole", "powder", "fresh"]
+    }
+  ],
+  "regions": [
+    {
+      "state": "up",
+      "name": "उत्तर प्रदेश",
+      "cities": ["लखनऊ", "कानपुर", "आगरा", "वाराणसी"]
+    },
+    {
+      "state": "mh",
+      "name": "महाराष्ट्र",
+      "cities": ["मुंबई", "पुणे", "नागपुर", "नाशिक"]
+    },
+    {
+      "state": "wb",
+      "name": "पश्चिम बंगाल",
+      "cities": ["कोलकाता", "हावड़ा", "दुर्गापुर"]
+    },
+    {
+      "state": "ap",
+      "name": "आंध्र प्रदेश",
+      "cities": ["विशाखापत्तनम", "विजयवाड़ा", "गुंटूर"]
+    }
+  ],
+  "performance": {
+    "cacheStrategy": "aggressive",
+    "imageCompression": true,
+    "lazyLoading": true,
+    "offlineSupport": true,
+    "dataUsageOptimization": true
+  },
+  "accessibility": {
+    "highContrast": false,
+    "largeText": false,
+    "voiceNavigation": false,
+    "screenReader": true
+  }
+}
